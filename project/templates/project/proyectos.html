@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Proyectos {% endblock %}
+
+{% block content %}
+
+    <div class="row"> 
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+              <div class="card-body">
+                  {% for project in projects %}
+      
+                    <h5 class="card-header">{{project.title}} </h5>
+                    <p class="card-text">
+                      {{project.description}}
+                    </p>
+    
+                    <video src="{{project.filevideo.url}}"  class="object-fit-contain" autoplay width="640" height="480" controls>
+                      
+                    </video>
+    
+                  {% endfor %}
+              </div>
+            </div>
+    </div>    
+{% endblock %}    
