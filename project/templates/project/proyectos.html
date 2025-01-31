@@ -10,13 +10,13 @@
               <div class="card-body">
                   {% for project in projects %}
       
-                    <h5 class="card-header">{{project.title}} </h5>
+                    <h2 class="card-header">{{project.title}} </h2>
                     <p class="card-text">{{project.description}}</p>
                     
                       <!-- Botón trigger modal -->
                       <div class="col-md-4 offset-md-4 mt-5">
                           <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-video-proyectos-{{project.id}}">
-                            Ver vídeo
+                            <i class="bi bi-camera-video-fill"></i> Ver vídeo
                           </button>
                       </div>    
                       <br/>
@@ -33,7 +33,9 @@
                                 <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls controlslist="nodownload"></video>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                  <i class="bi bi-door-open-fill"></i> Salir
+                                </button>
                               </div>
                             </div>
                           </div>
