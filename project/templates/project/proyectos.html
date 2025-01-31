@@ -11,16 +11,36 @@
                   {% for project in projects %}
       
                     <h5 class="card-header">{{project.title}} </h5>
-                    <p class="card-text">
-                      {{project.description}}
-                    </p>
-    
-                    <video src="{{project.filevideo.url}}"  class="object-fit-contain" autoplay width="640" height="480" controls>
-                     
-                    </video>
-    
+                    <p class="card-text">{{project.description}}</p>
+                    
+                      <!-- Botón trigger modal -->
+                      <div class="col-md-4 offset-md-4 mt-5">
+                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-video-proyectos-{{project.id}}">
+                            Ver vídeo
+                          </button>
+                      </div>    
+                      <br/>
+                        
+                      <!-- Modal -->
+                        <div class="modal fade" id="modal-video-proyectos-{{project.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Vídeo</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls></video>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                   {% endfor %}
               </div>
             </div>
+      </div>  
     </div>    
 {% endblock %}    

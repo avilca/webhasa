@@ -19,9 +19,9 @@ from django.urls import path
 from core import views
 from project import views as project_views
 
-#configuración para static y multimedia archivos
+#Importacion para archivos multimedia desde settings.py 
 from django.conf import settings
-
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -34,9 +34,9 @@ urlpatterns = [
 
 ] 
 
-if settings.DEBUG:
-    from django.conf.urls.static import static
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#Configuración para leer los archivos multimedia:
+urlpatterns += static(settings.MEDIA_URL, 
+                          document_root=settings.MEDIA_ROOT)
 
 
 
