@@ -26,11 +26,11 @@
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Vídeo</h1>
+                                <h1 class="modal-title fs-3" id="exampleModalLabel">Reproducción de vídeo</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls></video>
+                                <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls controlslist="nodownload"></video>
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
