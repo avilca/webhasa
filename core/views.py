@@ -8,6 +8,5 @@ def inicio(request):
 def nosotros(request):
     return render(request, 'core/nosotros.html')
 
-def servicios(request):
-    return render(request, 'core/servicios.html')
+
 

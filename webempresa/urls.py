@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from core import views
 from project import views as project_views
+from service import views as service_views
 
 #Importacion para archivos multimedia desde settings.py 
 from django.conf import settings
@@ -29,7 +30,7 @@ urlpatterns = [
 
     path('', views.inicio, name='inicio'),
     path('nosotros/', views.nosotros, name='nosotros'),
-    path('servicios/', views.servicios, name='servicios'),
+    path('servicios/', service_views.servicios, name='servicios'),
     path('proyectos/', project_views.proyectos, name='proyectos'),
 
 ] 

@@ -1,5 +1,6 @@
 #Ignorar el contenido del directio media/projects
 media/projects/*
+media/services/*
 
 #Ignorar el virtualizador venv
 venv
