@@ -34,15 +34,31 @@
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                                  <i class="bi bi-door-open-fill"></i> Salir
+                                  <i class="bi bi-door-open-fill"></i> Cerrar
                                 </button>
                               </div>
                             </div>
                           </div>
                         </div>
+
+                         
+
                   {% endfor %}
+
+                  <script>
+                    document.querySelectorAll(".modal:has(video)").forEach(el => el.addEventListener('hidden.bs.modal', event => {
+                      const video = event.target.querySelector("video");
+                      if(video){
+                        video.pause();
+                        video.currentTime = 0;
+                      }
+                    }));
+                  </script>     
               </div>
             </div>
         </div>  
     </div>    
+
+        
+    
 {% endblock %}    
