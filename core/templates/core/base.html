@@ -17,20 +17,23 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-          <div class="collapse navbar-collapse">
+          <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'inicio' %}" class="nav-link">Inicio</a>
+                    <li class="nav-item px-lg-5 ">
+                        <a href="{% url 'inicio' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/' %}active{% endif %}">Inicio</a>
                     </li>               
-                    <li class="nav-item">
-                        <a href="{% url 'nosotros' %}" class="nav-link">Nosotros</a>
+                    <li class="nav-item px-lg-5">
+                        <a href="{% url 'nosotros' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/nosotros/' %}active{% endif %}">Nosotros</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{% url 'servicios' %}" class="nav-link">Servicios</a>
+                    <li class="nav-item px-lg-5">
+                        <a href="{% url 'servicios' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/servicios/' %}active{% endif %}">Servicios</a>
                     </li>
-                    <li class="nav-item">
-                      <a href="{% url 'proyectos' %}" class="nav-link">Proyectos</a>
-                  </li>
+                    <li class="nav-item px-lg-5">
+                      <a href="{% url 'proyectos' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/proyectos/' %}active{% endif %}">Proyectos</a>
+                    </li>
+                    <li class="nav-item px-lg-5">
+                        <a href="{% url 'proyectos' %}" class="nav-link text-uppercase text-expanded">Contacto</a>
+                    </li>
                 </ul>
           </div>
         </div>
