@@ -11,7 +11,7 @@
                   {% for project in projects %}
       
                     <h2 class="card-header">{{project.title}} </h2>
-                    <p class="card-text">{{project.description}}</p>
+                    <p class="card-text">{{project.description|safe}}</p>
                     
                       <!-- Botón trigger modal -->
                       <div class="col-md-4 offset-md-4 mt-5">
