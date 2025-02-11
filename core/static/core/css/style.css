@@ -1,0 +1,16 @@
+.imagen-inicio {
+    background-image: url('/static/core/img/inicio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40vw;
+    width: 100vw;
+}
+
+
+
+.texto_encima {
+    position: absolute;
+    color: white;
+    text-align: center;
+}
