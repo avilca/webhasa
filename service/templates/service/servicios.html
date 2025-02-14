@@ -3,39 +3,23 @@
 {% block title %} Servicios {% endblock %}
 
 {% block content %}
-    <div class="row"> 
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                {% for service in services %}
-                    <div class="col-md-4">
-                        <img src="{{service.image.url}}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            
-                                <h5 class="card-title">{{service.title}}</h5>
-                                <p class="card-text">{{service.description}}</p>
-                            
-                        </div>
-                    </div>
-                {% endfor %}    
-            </div>
-          </div>
 
-
-        <!--<div class="col-md-6 offset-md-3">
-            <div class="card">
-              <div class="card-body">
-                  {% for service in services %}
-      
-                    <h2 class="card-header">{{service.title}} </h2>
-                    <p class="card-text">{{service.description}}</p>
-                    
-                      
-                  {% endfor %}
-              </div>
-            </div>
-        </div>  -->
-    </div>    
-
+    <main class="container py-3">
+            <section class="container">
+                <div class="parent"> 
+                        
+                        {% for service in services %}
+                            <div class="row" style="width: 24rem;">
+                                <img src="{{service.image.url}}" class="card-img-top img-mediana"  alt="...">
+                                    <div class="card-body">
+                                        <br>
+                                            <h3 class="card-title text-center">{{service.title}}</h3>
+                                            <p class="card-text">{{service.description}}</p>
+                                    </div>
+                            </div>    
+                        {% endfor %} 
+                                            
+                </div>    
+            </section>             
+    </main>    
 {% endblock %}    

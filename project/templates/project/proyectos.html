@@ -4,59 +4,61 @@
 
 {% block content %}
 
-    <div class="row"> 
-        <div class="col-md-6 offset-md-3">
-            <div class="card">
-              <div class="card-body">
-                  {% for project in projects %}
-      
-                    <h2 class="card-header">{{project.title}} </h2>
-                    <p class="card-text">{{project.description|safe}}</p>
-                    
-                      <!-- Botón trigger modal -->
-                      <div class="col-md-4 offset-md-4 mt-5">
-                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-video-proyectos-{{project.id}}">
-                            <i class="bi bi-camera-video-fill"></i> Ver vídeo
-                          </button>
-                      </div>    
-                      <br/>
-                        
-                      <!-- Modal -->
-                        <div class="modal fade" id="modal-video-proyectos-{{project.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h1 class="modal-title fs-3" id="exampleModalLabel">Reproducción de vídeo</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls controlslist="nodownload"></video>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                                  <i class="bi bi-door-open-fill"></i> Cerrar
-                                </button>
+    <main class="container">
+      <div class="row"> 
+          <div class="col-md-6 offset-md-3">
+              <div class="card">
+                <div class="card-body">
+                    {% for project in projects %}
+        
+                      <h2 class="card-header">{{project.title}} </h2>
+                      <p class="card-text">{{project.description|safe}}</p>
+                      
+                        <!-- Botón trigger modal -->
+                        <div class="col-md-4 offset-md-4 mt-5">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-video-proyectos-{{project.id}}">
+                              <i class="bi bi-camera-video-fill"></i> Ver vídeo
+                            </button>
+                        </div>    
+                        <br/>
+                          
+                        <!-- Modal -->
+                          <div class="modal fade" id="modal-video-proyectos-{{project.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-3" id="exampleModalLabel">Reproducción de vídeo</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <video src="{{project.filevideo.url}}" class="object-fit-contain" width="450" height="300" controls controlslist="nodownload"></video>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                                    <i class="bi bi-door-open-fill"></i> Cerrar
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                         
-                  {% endfor %}
+                          
+                    {% endfor %}
 
-                  <script>
-                    document.querySelectorAll(".modal:has(video)").forEach(el => el.addEventListener('hidden.bs.modal', event => {
-                      const video = event.target.querySelector("video");
-                      if(video){
-                        video.pause();
-                        video.currentTime = 0;
-                      }
-                    }));
-                  </script>     
+                    <script>
+                      document.querySelectorAll(".modal:has(video)").forEach(el => el.addEventListener('hidden.bs.modal', event => {
+                        const video = event.target.querySelector("video");
+                        if(video){
+                          video.pause();
+                          video.currentTime = 0;
+                        }
+                      }));
+                    </script>     
+                </div>
               </div>
-            </div>
-        </div>  
-    </div>    
+          </div>  
+      </div>    
+    </main>  
 
         
     
