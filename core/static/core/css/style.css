@@ -13,7 +13,7 @@
     color: white;
 }
 
-.grid {
+.grid_servicios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -25,3 +25,18 @@
     width: 20vw;
     height: 20vw;
     }
+
+    
+body {
+    position: relative; 
+    min-height: 100vh;
+    padding-bottom: 110px;
+}
+
+#footer{
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+}

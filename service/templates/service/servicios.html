@@ -3,22 +3,19 @@
 {% block title %} Servicios {% endblock %}
 
 {% block content %}
-
     <main class="container py-3">
             <section class="container">
-                <div class="grid"> 
-                        
+                <div class="grid_servicios">                      
                         {% for service in services %}
                             <div class="row" style="width: 24rem;">
                                 <img src="{{service.image.url}}" class="card-img-top img-mediana"  alt="...">
                                     <div class="card-body">
                                         <br>
-                                            <h3 class="card-title text-center">{{service.title}}</h3>
-                                            <p class="card-text">{{service.description}}</p>
+                                        <h3 class="card-title text-center">{{service.title}}</h3>
+                                        <p class="card-text">{{service.description}}</p>
                                     </div>
                             </div>    
-                        {% endfor %} 
-                                            
+                        {% endfor %}                                        
                 </div>    
             </section>             
     </main>    
