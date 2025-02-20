@@ -19,6 +19,7 @@ from django.urls import path, include
 from core import views
 from project import views as project_views
 from service import views as service_views
+from contact import views as contact_views
 
 #Importacion para archivos multimedia, ckeditor5 desde settings.py 
 from django.conf import settings
@@ -33,6 +34,7 @@ urlpatterns = [
     path('nosotros/', views.nosotros, name='nosotros'),
     path('servicios/', service_views.servicios, name='servicios'),
     path('proyectos/', project_views.proyectos, name='proyectos'),
+    path('contacto/', contact_views.contact, name='contacto'),
 
 ] 
 

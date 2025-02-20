@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'project',
     'service',
+    'contact',
     'social',
 ]
 
