@@ -8,7 +8,9 @@
         <section class="card card-body mt-5">
             
                 {% if 'ok' in request.GET %}
-                    <p>Su mensaje se ha enviado correctamente</p>
+                    <p class="alert alert-success">
+                        <i class="bi bi-check-circle-fill"></i> Su mensaje se ha enviado correctamente
+                    </p>
                 {% endif %}
                 <form action="" method="POST">
                     {% csrf_token %}
