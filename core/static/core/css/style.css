@@ -13,30 +13,14 @@
     color: white;
 }
 
-.grid_servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
 .img-mediana{
     width: 20vw;
     height: 20vw;
     }
-
-    
-body {
-    position: relative; 
-    min-height: 100vh;
-    padding-bottom: 110px;
-}
-
-#footer{
-    height: 110px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
    
+.contenedor-footer {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
 }

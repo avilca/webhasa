@@ -7,15 +7,13 @@
             <div class="card">                            
                 <div class="row" >
                     {% for service in services %}
-                        <div class="col-4">
-                            
+                        <div class="col-4">                    
                                 <img src="{{service.image.url}}" class="card-img-top img-mediana"  alt="...">
                                 <div class="card-body">
                                     <br>
                                     <h3 class="card-title text-center">{{service.title}}</h3>
                                     <p class="card-text">{{service.description}}</p>
-                                </div>
-                              
+                                </div>             
                         </div> 
                     {% endfor %}        
                 </div>                                                      
