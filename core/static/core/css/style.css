@@ -24,3 +24,8 @@
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
 }
+
+.custom-hr {
+    background-color: white;
+    height: 2px;
+ }
