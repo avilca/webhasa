@@ -16,10 +16,10 @@ def contact(request):
 
             # Enviamos el correo y redireccionamos
             email = EmailMessage(
-                "Hasa: Nuevo mensaje de contacto",
+                "Hasa: Nuevo mensaje",
                 "De {} <{}>\n\nEscribio:\n\n{}".format(name, email, content),
-                "footgolito@gmail.com",
-                ["hasaconstructora2025@gmail.com"],
+                "hasaconstructora2025@gmail.com", #correo de origen
+                ["hasaconstructora2025@gmail.com"], #correo de destino
                 reply_to=[email]
             )
 
