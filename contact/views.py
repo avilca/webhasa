@@ -18,7 +18,7 @@ def contact(request):
             email = EmailMessage(
                 "Hasa: Nuevo mensaje",
                 "De {} <{}>\n\nEscribio:\n\n{}".format(name, email, content),
-                "hasaconstructora2025@gmail.com", #correo de origen
+                "no-contestar@gmail.com", #correo de origen
                 ["hasaconstructora2025@gmail.com"], #correo de destino
                 reply_to=[email]
             )
