@@ -5,5 +5,4 @@ media/services/*
 #Ignorar el virtualizador venv
 venv
 
-#Ignorar SQLite
-db.sqlite3
+
