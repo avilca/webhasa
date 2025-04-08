@@ -14,33 +14,39 @@
     
     <div class="contenedor-footer">
         <header>
-            <nav class="navbar navbar-expand-lg bg-success navbar-dark">
-                <div class="container-fluid">
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-5 fw-bolder">
-                            <a href="{% url 'inicio' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/' %}active{% endif %}">Inicio</a>
-                        </li>               
-                        <li class="nav-item px-lg-5 fw-bolder">
-                            <a href="{% url 'nosotros' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/nosotros/' %}active{% endif %}">Nosotros</a>
-                        </li>
-                        <li class="nav-item px-lg-5 fw-bolder">
-                            <a href="{% url 'servicios' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/servicios/' %}active{% endif %}">Servicios</a>
-                        </li>
-                        <li class="nav-item px-lg-5 fw-bolder" >
-                        <a href="{% url 'proyectos' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/proyectos/' %}active{% endif %}">Proyectos</a>
-                        </li>
-                        <li class="nav-item px-lg-5 fw-bolder">
-                            <a href="{% url 'contacto' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/contacto/' %}active{% endif %}">Contacto</a>
-                        </li>
-                    </ul>
-                    
-                </div>
+            <nav class="navbar navbar-expand-lg bg-success navbar-dark ">
+                <div class="container">
+                    <a class="navbar-brand fw-bolder" href="#">
+                        <img src="/static/core/img/blanco.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Hasa            
+                        </a>
+                    <div class="container-fluid ">
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                            <div class="collapse navbar-collapse" id="navbarScroll">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item px-lg-4 fw-bolder">
+                                        <a href="{% url 'inicio' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/' %}active{% endif %}">Inicio</a>
+                                    </li>               
+                                    <li class="nav-item px-lg-4 fw-bolder">
+                                        <a href="{% url 'nosotros' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/nosotros/' %}active{% endif %}">Nosotros</a>
+                                    </li>
+                                    <li class="nav-item px-lg-4 fw-bolder">
+                                        <a href="{% url 'servicios' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/servicios/' %}active{% endif %}">Servicios</a>
+                                    </li>
+                                    <li class="nav-item px-lg-4 fw-bolder" >
+                                    <a href="{% url 'proyectos' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/proyectos/' %}active{% endif %}">Proyectos</a>
+                                    </li>
+                                    <li class="nav-item px-lg-4 fw-bolder">
+                                        <a href="{% url 'contacto' %}" class="nav-link text-uppercase text-expanded {% if request.path == '/contacto/' %}active{% endif %}">Contacto</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                    </div>
                 </div>
             </nav>
         </header>
