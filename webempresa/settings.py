@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3ui+d7q*fj&&ln+lvecsja1eva6kba8kcvcune$0*#5h_3dg9#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['webhasa.onrender.com']
+ALLOWED_HOSTS = ['webhasa.onrender.com', '*']
 
 
 # Application definition
