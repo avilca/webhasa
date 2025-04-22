@@ -43,5 +43,9 @@ urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
 
 
+#Modificando admin
+admin.site.site_header = "Hasa Constructora"
+admin.site.index_title = "Panel de administrador"
+admin.site.site_title = "Hasa Constructora"
 
 
